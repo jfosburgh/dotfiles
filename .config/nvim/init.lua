@@ -1,0 +1,7 @@
+require 'options'
+require 'plugins.lazy'
+require 'plugins.telescope'
+require 'plugins.lsp'
+require 'plugins.autocomplete'
+require 'plugins.oil'
+require 'keymaps'
