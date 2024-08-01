@@ -89,13 +89,14 @@ capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp'
 --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 local servers = {
   -- clangd = {},
-  gopls = { filetypes = { 'go', 'html', 'tmplhtml' }, settings = { build = { templateExtensions = { 'tmplhtml' } } } },
-  htmx = { filetypes = { 'html', 'tmpl' } },
-  html = { filetypes = { 'html', 'tmpl' } },
+  gopls = { filetypes = { 'go', 'html', 'tmplhtml' } },
+  htmx = { filetypes = { 'html', 'templ' } },
+  html = { filetypes = { 'html', 'templ' } },
   cssls = { filetypes = { 'css' } },
+  tailwindcss = { filetypes = { 'html', 'templ' } },
   eslint = { filetypes = { 'js', 'html' } },
   -- tsserver = { filetypes = { 'js', 'html' } },
-  templ = {},
+  templ = { filetypes = { 'templ' } },
   -- pyright = {},
   -- rust_analyzer = {},
   -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -152,6 +153,24 @@ require('mason-lspconfig').setup {
   },
 }
 
+-- local custom_format = function()
+--   if vim.bo.filetype == 'templ' then
+--     local bufnr = vim.api.nvim_get_current_buf()
+--     local filename = vim.api.nvim_buf_get_name(bufnr)
+--     local cmd = 'templ fmt ' .. vim.fn.shellescape(filename)
+--
+--     vim.fn.jobstart(cmd, {
+--       on_exit = function()
+--         -- Reload the buffer only if it's still the current buffer
+--         if vim.api.nvim_get_current_buf() == bufnr then
+--           vim.cmd 'e!'
+--         end
+--       end,
+--     })
+--   else
+--     vim.lsp.buf.format()
+--   end
+-- end
 -- require('lspconfig').gopls.setup {
 --   settings = {
 --     build = {

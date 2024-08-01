@@ -5,7 +5,7 @@ if not vim.loop.fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
-vim.filetype.add { extension = { templ = 'tmpl' } }
+vim.filetype.add { extension = { templ = 'templ' } }
 
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup {
@@ -99,6 +99,7 @@ require('lazy').setup {
       formatters_by_ft = {
         lua = { 'stylua' },
         go = { 'goimports', 'gofmt' },
+        templ = { 'templ' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
@@ -236,6 +237,7 @@ require('lazy').setup {
     -- Optional dependencies
     dependencies = { 'nvim-tree/nvim-web-devicons' },
   },
+  'vrischmann/tree-sitter-templ',
   {
     'epwalsh/obsidian.nvim',
     version = '*', -- recommended, use latest release instead of latest commit
