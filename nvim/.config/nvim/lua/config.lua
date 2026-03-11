@@ -67,29 +67,29 @@ vim.diagnostic.config({
 		},
 	},
 })
-
-require("codecompanion").setup({
-	ignore_warnings = true,
-	strategies = {
-		chat = {
-			name = "copilot",
-			model = "gpt-5",
-			slash_commands = {
-				provider = "fzf_lua",
-			},
-			keymaps = {
-				completion = {
-					modes = { i = "<C-Space>" },
-					index = 1,
-					callback = "keymaps.completion",
-					description = "Completion menu",
-				},
-			},
-		},
-	},
-	display = {
-		action_palette = {
-			provider = "fzf_lua",
-		},
-	},
-})
+--
+-- require("codecompanion").setup({
+-- 	ignore_warnings = true,
+-- 	strategies = {
+-- 		chat = {
+-- 			name = "copilot",
+-- 			model = "gpt-5",
+-- 			slash_commands = {
+-- 				provider = "fzf_lua",
+-- 			},
+-- 			keymaps = {
+-- 				completion = {
+-- 					modes = { i = "<C-Space>" },
+-- 					index = 1,
+-- 					callback = "keymaps.completion",
+-- 					description = "Completion menu",
+-- 				},
+-- 			},
+-- 		},
+-- 	},
+-- 	display = {
+-- 		action_palette = {
+-- 			provider = "fzf_lua",
+-- 		},
+-- 	},
+-- })

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cmd="$*"
+exec setsid uwsm-app -- ghostty --title=FloatTerm -e bash -c "$cmd"

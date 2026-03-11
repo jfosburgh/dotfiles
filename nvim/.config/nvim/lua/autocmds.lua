@@ -21,9 +21,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+local blacklist = { "shaderslang" }
+
 vim.api.nvim_create_autocmd("BufWritePre", {
 	group = vim.api.nvim_create_augroup("format-on-save", { clear = true }),
 	callback = function(args)
+		local f = vim.bo[args.buf].filetype
+		if vim.tbl_contains(blacklist, f) then
+			return
+		end
 		vim.lsp.buf.format({ bufnr = args.buf })
 	end,
 })
