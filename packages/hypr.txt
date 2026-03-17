@@ -14,7 +14,6 @@ hyprwayland-scanner
 waybar
 mako
 nautilus
-nautilus-open-any-terminal
 nwg-look
 pipewire
 pipewire-alsa
