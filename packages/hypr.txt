@@ -1,0 +1,13 @@
+hyprland
+hypridle
+hyprlang
+hyprlock
+hyprshot
+hyprpaper
+hyprutils
+hyprcursor
+hyprpicker
+hyprsunset
+hyprgraphics
+hyprland-guiutils
+hyprwayland-scanner

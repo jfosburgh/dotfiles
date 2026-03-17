@@ -7,7 +7,7 @@
   "margin-top": 4,
   "margin-left": 4,
   "margin-right": 4,
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["niri/workspaces", "hyprland/workspaces"],
   "modules-center": ["clock", "custom/screenrecording-indicator"],
   "modules-right": [
     "bluetooth",
@@ -16,6 +16,23 @@
     "cpu",
     "battery"
   ],
+  "niri/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "active": "󱓻"
+    },
+  },
   "hyprland/workspaces": {
     "on-click": "activate",
     "format": "{icon}",
