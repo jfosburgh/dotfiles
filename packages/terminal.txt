@@ -1,11 +1,8 @@
 ghostty
-neovim-git
 noto-fonts-emoji
 ttf-nerd-fonts-symbols
 ttf-iosevkaterm-nerd
 zsh
-zsh-autosuggestions
-zsh-completions
 fd
 eza
 fzf
@@ -25,5 +22,7 @@ unzip
 tar
 wiremix
 wireplumber
-yay
 zoxide
+bluez
+bluez-utils
+bluetui

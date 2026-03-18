@@ -2,3 +2,5 @@ zen-browser-bin
 neovim-git
 kanata-bin
 helium-browser-bin
+elephant-all
+nmrs
