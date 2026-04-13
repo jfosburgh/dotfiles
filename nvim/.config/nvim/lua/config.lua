@@ -1,5 +1,5 @@
-require("nvim-treesitter.configs").setup({
-	ensure_installed = { "lua", "odin", "glsl", "slang", "markdown", "markdown_inline", "rust", "python", "json", "bash", "yaml", },
+require("nvim-treesitter").setup({
+	-- ensure_installed = { "lua", "odin", "glsl", "slang", "markdown", "markdown_inline", "rust", "python", "json", "bash", "yaml", },
 	highlight = { enable = true },
 })
 
