@@ -1,0 +1,5 @@
+bin/.local/bin/env
+bin/.local/bin/env.fish
+bin/.local/bin/unsloth
+bin/.local/bin/uv
+bin/.local/bin/uvx
