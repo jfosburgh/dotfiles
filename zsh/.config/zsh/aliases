@@ -13,3 +13,5 @@ alias mvim='NVIM_APPNAME=nvim_minimal nvim'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+
+alias bb='s5cmd --endpoint-url https://s3.us-east-005.backblazeb2.com --credentials-file ~/.b2_s5cmd'
