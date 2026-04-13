@@ -52,6 +52,7 @@ vim.lsp.enable({
 	"slangd",
 	"rust_analyzer",
 	"pyright",
+	"ruff",
 })
 
 vim.diagnostic.config({
