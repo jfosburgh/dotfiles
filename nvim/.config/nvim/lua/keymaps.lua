@@ -23,3 +23,5 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 
 vim.keymap.set("n", "<C-n>", "<CMD>bn<CR>", { remap = true })
 vim.keymap.set("n", "<C-p>", "<CMD>bp<CR>", { remap = true })
+
+vim.keymap.set("n", "<leader>lg", "<CMD>LazyGit<CR>")

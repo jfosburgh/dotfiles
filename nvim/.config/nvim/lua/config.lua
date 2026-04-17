@@ -1,7 +1,4 @@
-require("nvim-treesitter.configs").setup({
-	ensure_installed = { "lua", "odin", "glsl", "slang", "markdown", "markdown_inline", "rust", "python", "json", "bash", "yaml", },
-	highlight = { enable = true },
-})
+require("nvim-treesitter").install({"lua", "odin", "glsl", "slang", "markdown", "markdown_inline", "rust", "python", "json", "bash", "yaml", })
 
 require("mini.icons").setup()
 require("mini.pick").setup()
