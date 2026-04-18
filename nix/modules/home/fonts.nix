@@ -2,7 +2,8 @@
 {
   home.packages = with pkgs; [
     noto-fonts-emoji
-    (nerdfonts.override { fonts = [ "IosevkaTerm" "NerdFontsSymbolsOnly" ]; })
+    nerd-fonts.iosevka-term
+    nerd-fonts.symbols-only
   ];
 
   fonts.fontconfig.enable = true;

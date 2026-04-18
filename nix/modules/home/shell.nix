@@ -3,13 +3,13 @@
 # Oh My Zsh is managed declaratively by programs.zsh — no setup/zsh/setup.sh needed.
 # TPM is bootstrapped via home.activation on first switch.
 #
-# The envs, aliases, and functions dotfiles are sourced via initExtra so they
+# The envs, aliases, and functions dotfiles are sourced via initContent so they
 # remain plain editable files in ~/dotfiles/zsh/.config/zsh/.
 #
 # Zsh dotfiles fate after migration:
-#   zsh/.config/zsh/envs      — Active, sourced in initExtra
-#   zsh/.config/zsh/aliases   — Active, sourced in initExtra
-#   zsh/.config/zsh/functions — Active, sourced in initExtra
+#   zsh/.config/zsh/envs      — Active, sourced in initContent
+#   zsh/.config/zsh/aliases   — Active, sourced in initContent
+#   zsh/.config/zsh/functions — Active, sourced in initContent
 #   zsh/.config/zsh/init      — No longer used (replaced by programs.zsh config)
 #   zsh/.zshrc                — No longer used (home-manager generates ~/.zshrc)
 { config, pkgs, lib, ... }:
@@ -60,7 +60,7 @@ let dot = "${config.home.homeDirectory}/dotfiles"; in
     };
 
     # Source the dotfiles directly — edits are immediately live without a rebuild
-    initExtra = ''
+    initContent = ''
       source ${dot}/zsh/.config/zsh/envs
       source ${dot}/zsh/.config/zsh/aliases
       source ${dot}/zsh/.config/zsh/functions

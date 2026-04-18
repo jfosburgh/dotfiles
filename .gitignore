@@ -1,1 +1,7 @@
 CLAUDE.md
+
+# Nix
+flake.lock
+.direnv/
+result
+result-*

@@ -4,7 +4,7 @@
 { config, pkgs, inputs, ... }:
 let
   dot    = "${config.home.homeDirectory}/dotfiles";
-  system = pkgs.system;
+  system = pkgs.stdenv.hostPlatform.system;
 in
 {
   home.packages = with pkgs; [
@@ -29,7 +29,7 @@ in
     swayosd
 
     # Launcher
-    rofi-wayland
+    rofi
 
     # Media / system utilities
     wiremix           # TUI PipeWire mixer
