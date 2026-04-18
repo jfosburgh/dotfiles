@@ -33,6 +33,9 @@
     vim
   ];
 
+  # Zsh must be enabled at the system level for users.users.*.shell = pkgs.zsh to work
+  programs.zsh.enable = true;
+
   # Allow unfree packages (required for NVIDIA, etc.)
   nixpkgs.config.allowUnfree = true;
 

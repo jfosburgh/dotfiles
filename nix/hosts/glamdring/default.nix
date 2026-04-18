@@ -14,6 +14,7 @@
   ];
 
   networking.hostName = "glamdring";
+  system.stateVersion = "25.11";  # set to the NixOS version at first install — do not change
 
   # System users
   users.users.james = {

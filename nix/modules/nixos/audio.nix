@@ -11,6 +11,5 @@
     pulse.enable      = true;
     jack.enable       = true;
     wireplumber.enable = true;
-    camera.enable     = true;   # PipeWire camera support (screen sharing / webcam)
   };
 }
