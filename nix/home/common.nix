@@ -3,6 +3,8 @@
 # home-manager.sharedModules (NixOS) or explicitly in flake.nix (standalone).
 { ... }:
 {
+  nixpkgs.config.allowUnfree = true;
+
   imports = [
     ../modules/home/cli.nix
     ../modules/home/desktop-common.nix
