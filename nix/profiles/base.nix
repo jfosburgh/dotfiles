@@ -31,6 +31,7 @@
     curl
     wget
     vim
+    home-manager
   ];
 
   # Zsh must be enabled at the system level for users.users.*.shell = pkgs.zsh to work
