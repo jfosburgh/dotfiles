@@ -21,4 +21,6 @@ let dot = "${config.home.homeDirectory}/dotfiles"; in
 
   xdg.configFile."hypr".source =
     config.lib.file.mkOutOfStoreSymlink "${dot}/hypr/.config/hypr";
+  xdg.configFile."waybar".source =
+    config.lib.file.mkOutOfStoreSymlink "${dot}/hypr/.config/waybar";
 }

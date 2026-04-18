@@ -46,10 +46,11 @@ in
   services.swayosd.enable = true;
 
   xdg.configFile = {
-    "ghostty".source = config.lib.file.mkOutOfStoreSymlink "${dot}/ghostty/.config/ghostty";
-    "mako".source    = config.lib.file.mkOutOfStoreSymlink "${dot}/mako/.config/mako";
-    "rofi".source    = config.lib.file.mkOutOfStoreSymlink "${dot}/rofi/.config/rofi";
-    "qt5ct".source   = config.lib.file.mkOutOfStoreSymlink "${dot}/theme/.config/qt5ct";
-    "qt6ct".source   = config.lib.file.mkOutOfStoreSymlink "${dot}/theme/.config/qt6ct";
+    "ghostty".source     = config.lib.file.mkOutOfStoreSymlink "${dot}/ghostty/.config/ghostty";
+    "mako".source        = config.lib.file.mkOutOfStoreSymlink "${dot}/mako/.config/mako";
+    "rofi".source        = config.lib.file.mkOutOfStoreSymlink "${dot}/rofi/.config/rofi";
+    "qt5ct".source       = config.lib.file.mkOutOfStoreSymlink "${dot}/theme/.config/qt5ct";
+    "qt6ct".source       = config.lib.file.mkOutOfStoreSymlink "${dot}/theme/.config/qt6ct";
+    "backgrounds".source = config.lib.file.mkOutOfStoreSymlink "${dot}/backgrounds/.config/backgrounds";
   };
 }
