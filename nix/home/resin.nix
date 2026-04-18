@@ -36,13 +36,4 @@
         -N ""
     fi
   '';
-
-  home.activation.sshRemote = lib.hm.dag.entryAfter [ "generateSshKey" ] ''
-    DOTFILES="$HOME/dotfiles"
-    REMOTE=$(${pkgs.git}/bin/git -C "$DOTFILES" remote get-url origin 2>/dev/null)
-    if [[ "$REMOTE" == https://* ]] && [ -f "$HOME/.ssh/id_ed25519" ]; then
-      ${pkgs.git}/bin/git -C "$DOTFILES" remote set-url origin \
-        git@github.com:jfosburgh/dotfiles.git
-    fi
-  '';
 }
