@@ -23,9 +23,10 @@
         ./nix/hosts/${hostname}/default.nix
         home-manager.nixosModules.home-manager
         {
-          home-manager.useGlobalPkgs    = true;
-          home-manager.useUserPackages  = true;
-          home-manager.extraSpecialArgs = { inherit inputs; };
+          home-manager.useGlobalPkgs        = true;
+          home-manager.useUserPackages      = true;
+          home-manager.extraSpecialArgs     = { inherit inputs; };
+          home-manager.backupFileExtension  = "bak";
           # Per-host user lists are declared in hosts/<hostname>/default.nix
         }
       ];
