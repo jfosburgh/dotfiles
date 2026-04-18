@@ -7,10 +7,10 @@
   home.homeDirectory = "/home/james";
 
   programs.git = {
-    enable    = true;
-    userName  = "James Fosburgh";
-    userEmail = "jwfosburgh@gmail.com";
-    extraConfig = {
+    enable = true;
+    settings = {
+      user.name  = "James Fosburgh";
+      user.email = "jwfosburgh@gmail.com";
       core.sshCommand = "ssh -i ~/.ssh/id_ed25519";
       init.defaultBranch = "main";
       pull.rebase = false;

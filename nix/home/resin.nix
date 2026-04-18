@@ -9,10 +9,10 @@
   home.homeDirectory = "/home/resin";
 
   programs.git = {
-    enable    = true;
-    userName  = "James Fosburgh";
-    userEmail = "james@resin.co";
-    extraConfig = {
+    enable = true;
+    settings = {
+      user.name  = "James Fosburgh";
+      user.email = "james@resin.co";
       core.sshCommand = "ssh -i ~/.ssh/id_ed25519";
       init.defaultBranch = "main";
       pull.rebase = false;
