@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     nerd-fonts.iosevka-term
     nerd-fonts.symbols-only
   ];
