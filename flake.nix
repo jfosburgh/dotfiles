@@ -16,7 +16,7 @@
   let
     system = "x86_64-linux";
     pkgs   = nixpkgs.legacyPackages.${system};
-    mkHost = hostname: nixpkgs.lib.nixosSystem {
+    mkHost = { hostname, system ? "x86_64-linux" }: nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = { inherit inputs self; };
       modules = [
@@ -33,9 +33,10 @@
     };
   in {
     nixosConfigurations = {
-      sting     = mkHost "sting";
-      glamdring = mkHost "glamdring";
-      testbed   = mkHost "testbed";
+      sting     = mkHost { hostname = "sting"; };
+      glamdring = mkHost { hostname = "glamdring"; };
+      testbed   = mkHost { hostname = "testbed"; };
+      pinas     = mkHost { hostname = "pinas"; system = "aarch64-linux"; };
     };
 
     # Standalone home-manager for non-NixOS systems.

@@ -40,10 +40,15 @@
   # Allow unfree packages (required for NVIDIA, etc.)
   nixpkgs.config.allowUnfree = true;
 
+  # Allow building for aarch64 (e.g. pinas) on x86_64 via QEMU emulation.
+  # Required for: nixos-rebuild switch --flake .#pinas --build-host localhost --target-host james@pinas --use-remote-sudo
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
   # Nix settings
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
     auto-optimise-store   = true;
+    extra-platforms       = [ "aarch64-linux" ];
   };
 
   # Automatic garbage collection
